@@ -13,13 +13,15 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/graph", (req, res) => {
-  const { x = 1, y = 2, z = 3, activation = "tanh" } = req.query;
+  const { x1 = 1, x2 = 2, w1 = 3,w2 = 1,b=0.5, activation = "tanh" } = req.query;
 
   const py = spawn("python", [
     path.join(__dirname, "graphwiz/generate_graph.py"),
-    x,
-    y,
-    z,
+    x1,
+    x2,
+    w1,
+    w2,
+    b,
     activation,
   ]);
 
@@ -30,4 +32,4 @@ app.get("/graph", (req, res) => {
   py.on("close", () => res.send(data));
 });
 
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

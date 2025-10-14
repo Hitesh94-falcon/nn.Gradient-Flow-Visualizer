@@ -11,9 +11,11 @@
     <h1>Dynamic Graph Visualizer</h1>
 
     <div class="controls">
-      <label>x: <input type="number" id="x" value="1" step="0.1"></label>
-      <label>y: <input type="number" id="y" value="2" step="0.1"></label>
-      <label>z: <input type="number" id="z" value="3" step="0.1"></label>
+      <label>x1: <input type="number" id="x1" value="1" step="0.1"></label>
+      <label>x2: <input type="number" id="x2" value="2" step="0.1"></label>
+      <label>w1: <input type="number" id="w1" value="3" step="0.1"></label>
+      <label>w2: <input type="number" id="w2" value="4" step="0.1"></label>
+      <label>b: <input type="number" id="b" value="5" step="0.1"></label>
       <label>Activation:
         <select id="activation">
           <option value="tanh">tanh</option>
@@ -22,6 +24,12 @@
         </select>
       </label>
       <button id="update-btn">Update Graph</button>
+      <div class="zoom-controls">
+        <button id="zoom-in" title="Zoom In">+</button>
+        <button id="zoom-out" title="Zoom Out">−</button>
+        <button id="zoom-reset" title="Reset">100%</button>
+        <button id="zoom-fit" title="Fit to view">Fit</button>
+      </div>
     </div>
 
     <div id="graph" class="graph-box"></div>
