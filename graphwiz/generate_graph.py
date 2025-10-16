@@ -14,12 +14,12 @@ def generate(x1, x2, w1, w2, b, activation):
     
     x1w1 = x1 * w1; x1w1.label = 'x1*w1'
     x2w2 = x2 * w2; x2w2.label = 'x2*w2'
-    x1w1x2w2 = x1w1 + x2w2; x1w1x2w2.label = 'x1*w1 + x2*w2'
+    x1w1x2w2 = x1w1 + x2w2; x1w1x2w2.label = 'x1*w1 + x2*w2' 
     n = x1w1x2w2 + b; n.label = 'n'
 
     # activation
     if activation == "relu":
-        s = n.relu(); s.label = "ReLU(n)"
+        s = n.relu(); s.label = "ReLU(n)"#12
     elif activation == "tanh":
         s = n.tanh(); s.label = "tanh(n)"
     elif activation == "sigmoid":
