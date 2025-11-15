@@ -19,19 +19,19 @@ def generate(x1, x2, w1, w2, b, activation):
 
     # activation
     if activation == "relu":
-        s = n.relu(); s.label = "ReLU(n)"#12
+        o = n.relu(); o.label = "ReLU"
     elif activation == "tanh":
-        s = n.tanh(); s.label = "tanh(n)"
+        o = n.tanh(); o.label = "tanh"
     elif activation == "sigmoid":
-        s = n.sigmoid(); s.label = "sigmoid(n)"
+        o = n.sigmoid(); o.label = "sigmoid"
     else:
         raise ValueError(f"Unknown activation: {activation}")
 
     # backward pass 
-    s.backward()
+    o.backward()
 
     # --- Draw graph ---
-    dot = draw_dot(s)
+    dot = draw_dot(o)
     svg = dot.pipe().decode("utf-8")
     return svg
 
