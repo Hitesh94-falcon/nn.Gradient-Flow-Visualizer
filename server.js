@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/graph", (req, res) => {
   const { x1 = 1, x2 = 2, w1 = 3,w2 = 1,b=0.5, activation = "tanh" } = req.query;
 
-  const py = spawn("python", [
+  const py = spawn("python3", [
     path.join(__dirname, "graphwiz/generate_graph.py"),
     x1,
     x2,
