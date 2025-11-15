@@ -27,6 +27,11 @@ This is the first version of the app. Future versions will introduce additional 
 
 Stay tuned for more updates and features!
 
+## Live Demo
+
+You can try the app online at:  
+[https://nn-gradient-flow-visualizer.onrender.com](https://nn-gradient-flow-visualizer.onrender.com)
+
 ## Getting Started
 
 ### Setup Instructions
