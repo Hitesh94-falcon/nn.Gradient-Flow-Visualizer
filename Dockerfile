@@ -2,11 +2,11 @@ FROM node:18-bullseye
 
 # Install system dependencies
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip graphviz && \
+    apt-get install -y python3 python3-pip && \
     apt-get clean
 
 # Install Python packages
-RUN pip3 install numpy matplotlib
+RUN pip3 install numpy matplotlib graphviz
 
 # Set working directory
 WORKDIR /app
