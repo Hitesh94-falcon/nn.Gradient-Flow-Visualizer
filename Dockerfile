@@ -3,10 +3,9 @@ FROM node:18-bullseye
 
 # Install Python and Graphviz
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip graphviz && \
     apt-get clean
     
-RUN pip3 install numpy
+RUN pip3 install requirements.txt
 
 # Create app directory
 WORKDIR /app
