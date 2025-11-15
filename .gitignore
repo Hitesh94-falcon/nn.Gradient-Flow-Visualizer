@@ -1,6 +1,4 @@
 /node_modules
 /micrograd.ipynb
 /graphwiz/__pycache__
-/package-lock.json
-/package.json
 /__pycache__

@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nn.Gradient Flow Visualizer
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    region: frankfurt
+    plan: free
+    envVars:
+      PYTHON_VERSION: 3.9

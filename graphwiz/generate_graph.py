@@ -1,4 +1,3 @@
-# graph/generate_graph.py
 import sys
 from Fund import value
 from graphwizard import draw_dot
